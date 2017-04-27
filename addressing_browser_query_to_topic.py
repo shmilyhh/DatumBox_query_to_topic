@@ -9,6 +9,9 @@ def get_topic_category(api_key, text):
 	return datum_box.topic_classification(text)
 
 def main(argv):
+	if not os.path.exists('results'):
+		os.makedirs('results')
+
 	api_key = ''
 	in_filename = ''
 	out_filename = ''
